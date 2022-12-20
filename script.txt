@@ -1,0 +1,53 @@
+Story telling based on "The bear and the two travellers".
+
+Introduction:
+Many years ago, there were two friends living in a small village. These two always felt like there was something missing in their life. Their ambition always pushed them
+into ideas that were laughed at by the rest close-minded villagers. They felt suppressed and wanted to find a way to change their life. Their ambition led one of the two
+to the idea to go on a trip away from their village to meet new people, new ways of living and explore the world. This brilliant idea filled them with excitement. However
+ideas as such, introduce extreme over-thinking and doubts stemming from the negativity around them.
+
+Two branches:
+1. Accept
+They both saluted their families and started on foot through the woods.
+
+2. Reject
+Stay in the village and carry on with their life. Story can lead forward only if the trip is accepted.
+
+Trip starts:
+
+While wandering around in the woods, they come accross a sign that says :left arrow City, Right arrow dragon's nest.
+
+Choice:
+1. go to city passage -> It is blocked by a lonely bear.
+2. go to dragon's nest which is empty.
+
+The bear then asks: I have never let a single person enter. Only people that come with friends can pass. However, I can either let only you pass and keep your friend to keep me company,
+or you can visit the dragon's nest and bring me back rock.
+
+
+By saying yes:
+Friend is trapped under the bear's supervision and cannot escape.
+The passage is now open:
+1.Can proceed and go to the city.
+2. go to the dragon's nest and get the bear's rock back.
+
+By saying no:
+The passage is blocked and the two friends can now continue to get the rock.
+The friends can go to the dragon's nest and get the bear's rock back.
+
+
+
+Taking choice 1 brings the player to the city where they see a great place of wisdom and beauty. The place very welcoming but all people seem to reject the person. The people in the city
+know that no person has ever made it to the city alone. They all came as pairs or more than 2.
+
+
+Talking to them: I am sorry but we are estranged by the fact that you made it here alone. The bear never lets people enter here without friends.
+This means that you either killed the bear or let your friends back to the bear. Did you kill the bear? Yes/no => yes=>"oh you must be an individual to be feared of", yes/no=> no => "Then you have let your friend back. Please go fix your mistake."
+The player can now wander around the city but no one wants to deal with them. This can change if they go back and fix their mistake.
+
+
+By taking choice 2, the player keeps their friend and they proceed to the dragon's nest.
+
+The dragon's nest:
+
+A series of challenges, games and adventure to defeat the dragon and get the rock back.
