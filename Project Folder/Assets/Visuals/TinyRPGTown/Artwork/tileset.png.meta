@@ -1827,8 +1827,8 @@ TextureImporter:
       name: tileset_60
       rect:
         serializedVersion: 2
-        x: 176
-        y: 80
+        x: 170
+        y: 75
         width: 16
         height: 16
       alignment: 0
@@ -2551,7 +2551,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8668380642ad314479180c88d34eaaaf
     internalID: 0
     vertices: []
     indices: 
