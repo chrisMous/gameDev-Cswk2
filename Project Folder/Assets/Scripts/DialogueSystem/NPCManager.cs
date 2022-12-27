@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCManager : MonoBehaviour
+public class NPCManager : NPCAction
 {
    private bool canBeRead = false;
    public QuestGiver questGiver;
