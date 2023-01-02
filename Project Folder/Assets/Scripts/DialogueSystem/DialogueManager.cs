@@ -1,57 +1,58 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
-    public GameObject nameText;
-    public GameObject dialogueText;
-    public Queue<string> sentences;
+    public Text nameText;
+    public Text dialogueText;
+    private Queue<string> sentences;
     public Animator animator;
-
+    public GameObject dialogueCanvas;
     // Start is called before the first frame update
     void Start() {
         this.sentences = new Queue<string>();
     }
 
     public void StartDialogue(Interaction dialogue) {
-        StopAllCoroutines();
+        //StopAllCoroutines();
+        dialogueCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        Debug.Log("Starting Convo: " + dialogue.name);
         sentences.Clear();
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
         }
-        nameText.GetComponent<TextMeshProUGUI>().text = dialogue.name;
+        nameText.text = dialogue.name;
         DisplayNextSentence();
-        animator.SetBool("IsOpen", true);
-
+        animator.SetBool("isOpen", true);
     }
 
     public void DisplayNextSentence() {
-        StopAllCoroutines();
+        
         if (sentences.Count == 0) {
             EndDialogue();
             return;
         }
 
         string sentence = sentences.Dequeue();
+        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
 
     IEnumerator TypeSentence(string sentence) {
-        TextMeshProUGUI textComponent = dialogueText.GetComponent<TextMeshProUGUI>();
-        textComponent.text = "";
+        dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
-            textComponent.text += letter;
+            dialogueText.text += letter;
             yield return new WaitForSeconds(0.02f);
         }
     }
 
     public void EndDialogue() {
-        StopAllCoroutines();
-        dialogueText.GetComponent<TextMeshProUGUI>().text = "";
-        nameText.GetComponent<TextMeshProUGUI>().text = "";
-        animator.SetBool("IsOpen", false);
+        dialogueText.text = "";
+        nameText.text = "";
+        animator.SetBool("isOpen", false);
     }
 
 }

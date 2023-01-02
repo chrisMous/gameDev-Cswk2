@@ -16,7 +16,7 @@ public class QuestGiver : MonoBehaviour
         if (!given) {
             Destroy(Quests.GetComponent<Quest>());
             Quest = (Quest)Quests.AddComponent(System.Type.GetType(QuestType));
-            QuestBoxManager.current.SetQuest(Quest);
+            //QuestBoxManager.current.SetQuest(Quest);
             given = true;
         }
     }
