@@ -47,6 +47,7 @@ public class DialogueManager : MonoBehaviour
         
         if (sentences.Count == 0 && state == 1) {
             Debug.Log("Showing choices!");
+            buttonText();
             choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
             choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
             return;
@@ -77,8 +78,16 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("isOpen", false);
     }
 
+    public void buttonText(){
+        if(nameText.text.CompareTo("Inn Chef") == 0){
+        GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Sure I will get you the mushrooms";
+        GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "I will come back later";
+        }
+    }
     public void loadScene(){
-         SceneManager.LoadScene("Town");
+         if(nameText.text.CompareTo("Inn Chef") == 0){
+         SceneManager.LoadScene("MushroomForest");
+         }
     }
 
 }
