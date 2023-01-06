@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCManager : NPCAction
 {
    private bool canBeRead = false;
-   public QuestGiver questGiver;
+   //public QuestGiver questGiver;
 
 
     // Update is called once per frame
@@ -13,9 +13,9 @@ public class NPCManager : NPCAction
     {
         if (canBeRead && Input.GetKeyDown(KeyCode.E)) {
             TriggerDialogue();
-            if (questGiver != null) {
-                questGiver.AssignQuest();
-            }
+            // if (questGiver != null) {
+            //     questGiver.AssignQuest();
+            // }
         }
     }
 
