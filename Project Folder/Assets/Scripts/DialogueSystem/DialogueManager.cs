@@ -31,6 +31,11 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         nameText.text = dialogue.name;
+        
+        if(nameText.text.CompareTo("River Manager") == 0){
+            state = 2;
+        }
+
         DisplayNextSentence();
         animator.SetBool("isOpen", true);
     }
@@ -84,6 +89,10 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("isOpen", false);
 
         if(nameText.text.CompareTo("Mother Pig") == 0){
+         Debug.Log("Back to Town");
+         SceneManager.LoadScene("Town");
+         }
+         if(nameText.text.CompareTo("River Manager") == 0 && RiverQuest.blocked == 2){
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
