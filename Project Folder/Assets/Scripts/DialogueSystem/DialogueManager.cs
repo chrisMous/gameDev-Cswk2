@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
         //StopAllCoroutines();
         dialogueCanvas.GetComponent<CanvasGroup>().alpha = 1;
         Debug.Log("Starting Convo: " + dialogue.name);
+
         sentences.Clear();
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
@@ -44,8 +45,14 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void DisplayNextSentence() {
-        
-        if (sentences.Count == 0 && state == 1) {
+        Debug.Log(sentences.Count);
+        if(sentences.Count == 0 && nameText.text.CompareTo("Friend") == 0){
+            Destroy(GameObject.Find("Player").GetComponent<NPCManager>());
+            Destroy(GameObject.Find("Player").GetComponent<DialogueManager>());
+            EndDialogue();
+            return;
+        }
+        else if (sentences.Count == 0 && state == 1) {
             Debug.Log("Showing choices!");
             buttonText();
             choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
@@ -72,10 +79,15 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue() {
         dialogueText.text = "";
-        nameText.text = "";
         choiceCanvas.GetComponent<CanvasGroup>().interactable = false;
         choiceCanvas.GetComponent<CanvasGroup>().alpha = 0;
         animator.SetBool("isOpen", false);
+
+        if(nameText.text.CompareTo("Mother Pig") == 0){
+         Debug.Log("Back to Town");
+         SceneManager.LoadScene("Town");
+         }
+         nameText.text = "";
     }
 
     public void buttonText(){
@@ -87,6 +99,9 @@ public class DialogueManager : MonoBehaviour
     public void loadScene(){
          if(nameText.text.CompareTo("Inn Chef") == 0){
          SceneManager.LoadScene("MushroomForest");
+         }
+         else if(nameText.text.CompareTo("Mother Pig") == 0){
+         SceneManager.LoadScene("Town");
          }
     }
 
