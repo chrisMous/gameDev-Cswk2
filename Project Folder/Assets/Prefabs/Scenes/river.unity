@@ -396,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69662937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.17, y: -2.67, z: 0}
+  m_LocalPosition: {x: 13.55, y: -5.5, z: 0}
   m_LocalScale: {x: 1.2, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -410,6 +410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1750575966}
     m_Modifications:
+    - target: {fileID: 3093243966004119393, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Text
+      value: Sorry we gotta go now. Talk to you another time!
+      objectReference: {fileID: 0}
     - target: {fileID: 3093243966618320146, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_Name
       value: DialogueParent
@@ -457,6 +461,54 @@ PrefabInstance:
     - target: {fileID: 3093243966618320365, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Text
+      value: Stay Longer with the River Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967094121107, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Text
+      value: Stay Longer with the River Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1582841899}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1582841898}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerAdditionalDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: extraDia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NPCAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RiverQuest, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
@@ -546,7 +598,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298738980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.31, y: -3.07, z: 0}
+  m_LocalPosition: {x: 7.29, y: -5.78, z: 0}
   m_LocalScale: {x: 1.2, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49047,15 +49099,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: River Manager
+    name: River  Manager
     sentences:
     - Wow Splendid! You have Succesfully blocked all of the fence gaps. Now the river
       will be contained...
     - This should be a good temporary solution. Thank you!
     - The Kings will reward you both for your effort. Good Luck for the rest of your
-      quests!
+      quests! But before you go...
+    - I would like to keep you for an extra hour to get to know you better and see
+      for myself why the people of this town favour you.
+    - 'Friend: *Whispers* We need to go I agreed I would go to the town market with
+      my mother to get groceries, please politely decline.'
   additionalDialogue:
-    additionalSentences: []
+    additionalSentences:
+    - Sure we can stay longer, we want to get to know you better too!
+    - '*1 Hour Later*...'
+    - 'Friend: Ughh I told you I needed to go you should''t have kept me here for
+      that extra hour. Anyway I''m heading back home.'
 --- !u!1 &1750575962
 GameObject:
   m_ObjectHideFlags: 0

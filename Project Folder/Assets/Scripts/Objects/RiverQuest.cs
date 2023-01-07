@@ -5,11 +5,11 @@ using UnityEngine;
 public class RiverQuest : MonoBehaviour
 {
     public static int blocked;
-    public bool chooseHelp;
+    public static bool extraDialogue;
     void Start()
     {
         blocked = 0;
-        chooseHelp = false;
+        extraDialogue = false;
     }
     public static void incrementBlocked(){
         blocked++;
@@ -17,6 +17,8 @@ public class RiverQuest : MonoBehaviour
         GameObject.Find("rock").GetComponent<NPCManager>().TriggerDialogue();
         if(blocked == 2){
             Debug.Log("Successfully Blocked");
+            extraDialogue = true;
+            Debug.Log("Extra: " + extraDialogue);
             GameObject.Find("Player").GetComponent<NPCManager>().TriggerDialogue();
         }
     }
@@ -25,5 +27,4 @@ public class RiverQuest : MonoBehaviour
         blocked--;
     }
 
-   
 }

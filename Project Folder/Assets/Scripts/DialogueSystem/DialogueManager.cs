@@ -32,8 +32,11 @@ public class DialogueManager : MonoBehaviour
         }
         nameText.text = dialogue.name;
         
-        if(nameText.text.CompareTo("River Manager") == 0){
+        if(nameText.text.CompareTo("River Manager") == 0 && RiverQuest.extraDialogue == false){
             state = 2;
+        }
+        else if( RiverQuest.extraDialogue == true){
+            state = 1;
         }
 
         DisplayNextSentence();
@@ -57,7 +60,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        else if (sentences.Count == 0 && state == 1) {
+        else if ((sentences.Count == 0 && state == 1)) {
             Debug.Log("Showing choices!");
             buttonText();
             choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
@@ -92,7 +95,7 @@ public class DialogueManager : MonoBehaviour
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
-         if(nameText.text.CompareTo("River Manager") == 0 && RiverQuest.blocked == 2){
+         if(nameText.text.CompareTo("River  Manager") == 0){
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
