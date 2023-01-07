@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private float speed;
     public float defaultSpeed = 5f;
+    public static bool move = true;
 
     public void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -18,13 +19,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update() {
-        movement.x = Input.GetAxisRaw("Horizontal");
+        if (move){
+            movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        }
+        
     }
     void FixedUpdate() {
+        if(move){
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        }
     }
 }

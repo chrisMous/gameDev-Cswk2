@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     public static void PlayGame(){
         //playerMovement.movement = true;
         Time.timeScale = 1;
-        SceneManager.LoadScene("Town");
+        SceneManager.LoadScene("Start");
     }
 
     public void QuitGame(){
