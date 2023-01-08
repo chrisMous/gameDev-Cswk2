@@ -18,6 +18,7 @@ public class conflict : MonoBehaviour
     //     textAfter2 = ["Person 1: Why would you even bother asking then?","Friend: I don't understand, we could have this solved already..", "me: We can't be spending our money around like this.."];
     // }
     }
+    // dice or rock paper scissors
     // Update is called once per frame
     void Update()
     {
