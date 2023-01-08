@@ -9,14 +9,16 @@ public class Treasurer : MonoBehaviour
     void Start()
     {
     //     preText = ["Treasurer: This is your lucky day! I have found some treasure chests in the forest and I need your help",
-    //     "Me: What do you mean"]
-    //     text = ["Treasurer: I know,","Person 2: This is something that I worked for!",
-    //     "Person 1: We both worked! I am just demanding for what I righteously shall get!","Person 2: It is unfair! All you did was stare..",
-    //     "Person 1: You are being rude!","Person 2: What do you want now?","Me : I came to help you with your conflict..",
-    //     "Person 2: If you are not willing to give us money, You might as well get lost!","Friend: We could give them the money we gathered, ain't that a good idea?"];
-    //     choice = ["Choice: Give money","Choice: Get Lost"]
-    //     textAfter1 = ["Person 1: That's so generous of you!","Person 2: I don't believe this! You sir, have a big heart", "Friend: I knew you had this in you. You are a great person!"];
-    //     textAfter2 = ["Person 1: Why would you even bother asking then?","Friend: I don't understand, we could have this solved already..", "me: We can't be spending our money around like this.."];
+    //     "Me: What do you mean?","Treasurer: There are hidden gem chests in the wild, wanna follow me?","friend:No friend, this is dangerous, we shall stay here!"]
+    //     choices = "Go","Stay"
+    //     textAfterStay = ["Treasurer: Why would you even bother asking then?","Friend: Bravo friend! I am proud of you."];
+    //     on go -> treasurer scene
+    //     textgo = ["Treasurer:There are three chests, I need you to hand me Gold"];
+    //     3 chests, one has gold, one has silver, one has bronze
+    //     on correct choice, win go back,
+    //     on wrong choice, lose go back, can try again
+    //     textAfterwin = ["Treasurer: Horray! I will gladly talk to the king about you","Friend: I hope this does not put us into trouble!"];
+    //     textAfterLose = ["Treasurer: This is not what I asked for..","Friend: Ah you made a mistake, I hope it does not cause us trouble"];
     // }
     }
     // Update is called once per frame
