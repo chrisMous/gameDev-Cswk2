@@ -41,7 +41,8 @@ public class DialogueManager : MonoBehaviour
 
         if(nameText.text.CompareTo("Customer") == 0 || nameText.text.CompareTo("Customer Order 1") == 0 || 
         nameText.text.CompareTo("Bar  Manager") == 0 || nameText.text.CompareTo("Customer Order 2") == 0 ||
-        nameText.text.CompareTo("Teacher") == 0 || (nameText.text.CompareTo("Student") == 0 && StudentQuest.complete) ){
+        nameText.text.CompareTo("Teacher") == 0 || (nameText.text.CompareTo("Student") == 0 && StudentQuest.complete) 
+         || (nameText.text.CompareTo("PeopleArguing") == 0 && ConflictQuest.resolvedConflict)){
             state = 2;
         }
 
@@ -102,15 +103,21 @@ public class DialogueManager : MonoBehaviour
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
-         if(nameText.text.CompareTo("River  Manager") == 0){
+         else if(nameText.text.CompareTo("River  Manager") == 0){
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
-         if(nameText.text.CompareTo("Student") == 0 && StudentQuest.complete){
+         else if(nameText.text.CompareTo("Student") == 0 && StudentQuest.complete){
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
+         else if(nameText.text.CompareTo("People Arguing") == 0 && ConflictQuest.resolvedConflict){
+         Debug.Log("Back to Town");
+         SceneManager.LoadScene("Town");
+         }
+         else{
          nameText.text = "";
+         }
     }
 
     public void buttonText(){
@@ -134,6 +141,11 @@ public class DialogueManager : MonoBehaviour
             GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Friends";
             }
         }
+        else if(nameText.text.CompareTo("People Arguing") == 0 && ConflictQuest.questionNo > 0){
+             GameObject.Find("Choice3").GetComponentInChildren<Text>().text = "Rock";
+             GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Paper";
+             GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Scissors";
+        }
     }
     public void loadScene(){
          if(nameText.text.CompareTo("Inn Chef") == 0){
@@ -142,9 +154,13 @@ public class DialogueManager : MonoBehaviour
          else if(nameText.text.CompareTo("Mother Pig") == 0){
          SceneManager.LoadScene("Town");
          }
-         if(nameText.text.CompareTo("Bar Manager") == 0){
+         else if(nameText.text.CompareTo("Bar Manager") == 0){
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
+         }
+         else{
+            Debug.Log("Back to Town");
+            SceneManager.LoadScene("Town");
          }
     }
 
