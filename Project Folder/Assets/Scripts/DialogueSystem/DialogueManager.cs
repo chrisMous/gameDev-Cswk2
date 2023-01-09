@@ -150,6 +150,14 @@ public class DialogueManager : MonoBehaviour
              GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Paper";
              GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Scissors";
         }
+        else if(FinalChoices.badEnding){
+             GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "End Game";
+             GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Try Again";
+        }
+        else if(FinalChoices.choiceNumber > 1 && !FinalChoices.badEnding){
+            GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Give Away Badges";
+            GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Sacrifice Friend";
+        }
     }
     public void loadScene(){
          if(nameText.text.CompareTo("Inn Chef") == 0){
