@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
         if(nameText.text.CompareTo("Customer") == 0 || nameText.text.CompareTo("Customer Order 1") == 0 || 
         nameText.text.CompareTo("Bar  Manager") == 0 || nameText.text.CompareTo("Customer Order 2") == 0 ||
         nameText.text.CompareTo("Teacher") == 0 || (nameText.text.CompareTo("Student") == 0 && StudentQuest.complete) 
-         || (nameText.text.CompareTo("PeopleArguing") == 0 && ConflictQuest.resolvedConflict)){
+         || (nameText.text.CompareTo("PeopleArguing") == 0 && ConflictQuest.resolvedConflict) || nameText.text.CompareTo("Villager") == 0 ){
             state = 2;
         }
 
@@ -161,6 +161,9 @@ public class DialogueManager : MonoBehaviour
          else if(nameText.text.CompareTo("Bar Manager") == 0){
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
+         }
+         else if (nameText.text.CompareTo("The Two Kings") == 0){
+             SceneManager.LoadScene("Home");
          }
          else{
             Debug.Log("Back to Town");

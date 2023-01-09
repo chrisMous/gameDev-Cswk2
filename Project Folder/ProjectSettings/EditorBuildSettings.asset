@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/Town.unity
     guid: 5a053def77646784b8dc7f272b0d9f07
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/Home.unity
+    guid: 84158a1ac8a27c04aba2019abec6da29
   m_configObjects: {}
