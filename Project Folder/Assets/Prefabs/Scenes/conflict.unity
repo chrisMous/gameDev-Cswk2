@@ -123,6 +123,66 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &198444647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198444649}
+  - component: {fileID: 198444648}
+  m_Layer: 0
+  m_Name: Win3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &198444648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198444647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: SCISSORS!'
+    - 'Person 1: (At the same time) PAPER!'
+    - 'Me: Haha! I won! You now split the money with your friend..'
+    - 'Person 1: Ugh.. this is weird.. I will pay the price because i overstepped!'
+    - 'Neighbour: Ahh it looks like you solved this argument, Thank you now the neighbourhood
+      is gonna be quiet again...'
+    - 'Neighbour: I''ll put in a good word for you...
+
+
+      Friend: Thank you!'
+    - 'Player: That''s great, now let''s return home and continue doing our quests!'
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &198444649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198444647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &372220240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +193,22 @@ PrefabInstance:
     - target: {fileID: 3093243966004119393, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_Text
       value: Give money
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966143127061, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966451328207, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1877857288}
+    - target: {fileID: 3093243966451328207, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: handleButton1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966451328207, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ConflictQuest, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3093243966618320146, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_Name
@@ -182,9 +258,89 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3093243966618320366, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Text
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243966995003688, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3093243967094121107, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_Text
       value: Play Rock-Paper-Scissors
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967177588752, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efee20b64d1e73942a29ba61ce3379c3, type: 3}
+    - target: {fileID: 3093243967177588753, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1877857288}
+    - target: {fileID: 3093243967177588753, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: handleButton3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967177588753, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ConflictQuest, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967177588758, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967177588758, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967177588758, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967177588758, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 440
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967177588759, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_Name
+      value: Choice3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1877857288}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: handleButton2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ConflictQuest, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
@@ -193,6 +349,123 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3093243966618320365, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
   m_PrefabInstance: {fileID: 372220240}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &372220242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3093243966143127066, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+  m_PrefabInstance: {fileID: 372220240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &414901728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414901730}
+  - component: {fileID: 414901729}
+  m_Layer: 0
+  m_Name: Loss1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &414901729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414901728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: ROCK!'
+    - 'Person 1: (At the same time) PAPER!'
+    - 'Person 1: Haha! you lost!  Now give us the money!'
+    - 'Friend: I don''t understand, we could have this solved already... *sighs and
+      gives money*'
+    - 'Neighbour: Ahh it looks like you solved this argument, Thank you now the neighbourhood
+      is gonna be quiet again...'
+    - 'Neighbour: I''ll put in a good word for you...
+
+
+      Friend: Thank you!'
+    - 'Player: That''s great, now let''s return home and continue doing our quests!'
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &414901730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414901728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &457950718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457950720}
+  - component: {fileID: 457950719}
+  m_Layer: 0
+  m_Name: PlayRPS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &457950719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457950718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Person 1: Let''s Play Rock-Paper-Scssors to settle this!'
+    - Rock-Paper-Scissors SHOOT!
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &457950720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457950718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &509169866
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +598,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 43, y: 0, z: 0}
+--- !u!1 &688151141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 688151143}
+  - component: {fileID: 688151142}
+  m_Layer: 0
+  m_Name: Loss3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &688151142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688151141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: SCISSORS!'
+    - 'Person 1: (At the same time) ROCK!'
+    - 'Person 1: Haha! you lost!  Now give us the money!'
+    - 'Friend: I don''t understand, we could have this solved already... *sighs and
+      gives money*'
+    - 'Neighbour: Ahh it looks like you solved this argument, Thank you now the neighbourhood
+      is gonna be quiet again...'
+    - 'Neighbour: I''ll put in a good word for you...
+
+
+      Friend: Thank you!'
+    - 'Player: That''s great, now let''s return home and continue doing our quests!'
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &688151143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688151141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &772857238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,7 +720,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.name
+      value: People Arguing
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Person 1: That''s so generous of you! I should value my friends more,
+        you showed me a great example!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: 'Person 2: I don''t believe this! You sir, have a big heart", "Friend:
+        I knew you had this in you. You are a great person!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: 'Neighbour: Ahh it looks like you solved this argument, Thank you now
+        the neighbourhood is gonna be quiet again...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: 'Neighbour: I''ll put in a good word for you...
+
+
+        Friend: Thank
+        you!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: 'Player: That''s great, now let''s return home and continue doing our
+        quests!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: 'Neighbour: I''ll put in a good word for you...
+
+
+        Friend: Thank
+        you!'
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235610, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_Enabled
@@ -398,10 +776,9 @@ PrefabInstance:
       objectReference: {fileID: 21300004, guid: df894d170d5f44be293fae0ef08b055c, type: 3}
     - target: {fileID: 3465313907221235615, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_Name
-      value: npc (1)
+      value: npc1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
     - {fileID: 3465313907221235610, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
 --- !u!1001 &824862271
@@ -615,6 +992,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+--- !u!1 &849092856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849092858}
+  - component: {fileID: 849092857}
+  m_Layer: 0
+  m_Name: Win1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &849092857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849092856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: ROCK!'
+    - 'Person 1: (At the same time) SCISSORS!'
+    - 'Me: Haha! I won! You now split the money with your friend..'
+    - 'Person 1: Ugh.. this is weird.. I will pay the price because i overstepped!'
+    - 'Neighbour: Ahh it looks like you solved this argument, Thank you now the neighbourhood
+      is gonna be quiet again...'
+    - 'Neighbour: I''ll put in a good word for you...
+
+
+      Friend: Thank you!'
+    - 'Player: That''s great, now let''s return home and continue doing our quests!'
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &849092858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849092856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945082423
 GameObject:
   m_ObjectHideFlags: 0
@@ -19598,6 +20035,58 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1170628279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170628281}
+  - component: {fileID: 1170628280}
+  m_Layer: 0
+  m_Name: PlayAgain1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1170628280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170628279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: Ughh it seems that we both chose Rock, let''s play Again to decide
+      who wins...'
+    - Rock, Paper Scissors SHOOT!!!
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &1170628281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170628279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1250684405
 GameObject:
   m_ObjectHideFlags: 0
@@ -19665,6 +20154,130 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1323550913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323550915}
+  - component: {fileID: 1323550914}
+  m_Layer: 0
+  m_Name: PlayAgain3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1323550914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323550913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: Ughh it seems that we both chose Scissors, let''s play Again to decide
+      who wins...'
+    - Rock, Paper Scissors SHOOT!!!
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &1323550915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323550913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361221997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3093243966618320367, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+  m_PrefabInstance: {fileID: 372220240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedfba19ad9d1f94abe3674b9d540a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1437688867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437688869}
+  - component: {fileID: 1437688868}
+  m_Layer: 0
+  m_Name: Loss2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1437688868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437688867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: PAPER!'
+    - 'Person 1: (At the same time) SCISSORS!'
+    - 'Person 1: Haha! you lost!  Now give us the money!'
+    - 'Friend: I don''t understand, we could have this solved already... *sighs and
+      gives money*'
+    - 'Neighbour: Ahh it looks like you solved this argument, Thank you now the neighbourhood
+      is gonna be quiet again...'
+    - 'Neighbour: I''ll put in a good word for you...
+
+
+      Friend: Thank you!'
+    - 'Player: That''s great, now let''s return home and continue doing our quests!'
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &1437688869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437688867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1453240116
 GameObject:
@@ -20109,6 +20722,293 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1629310654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629310655}
+  - component: {fileID: 1629310657}
+  - component: {fileID: 1629310656}
+  m_Layer: 0
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1629310655
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629310654}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1731483908}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 3, y: -2}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1629310656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629310654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.8392157, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Return Home
+--- !u!222 &1629310657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629310654}
+  m_CullTransparentMesh: 1
+--- !u!1 &1729137651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729137653}
+  - component: {fileID: 1729137652}
+  m_Layer: 0
+  m_Name: Win2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1729137652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729137651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: PAPER!'
+    - 'Person 1: (At the same time) ROCK!'
+    - 'Me: Haha! I won! You now split the money with your friend..'
+    - 'Person 1: Ugh.. this is weird.. I will pay the price because i overstepped!'
+    - 'Neighbour: Ahh it looks like you solved this argument, Thank you now the neighbourhood
+      is gonna be quiet again...'
+    - 'Neighbour: I''ll put in a good word for you...
+
+
+      Friend: Thank you!'
+    - 'Player: That''s great, now let''s return home and continue doing our quests!'
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &1729137653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729137651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1731483907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731483908}
+  - component: {fileID: 1731483911}
+  - component: {fileID: 1731483910}
+  - component: {fileID: 1731483909}
+  - component: {fileID: 1731483912}
+  m_Layer: 0
+  m_Name: goHome
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1731483908
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731483907}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1629310655}
+  m_Father: {fileID: 372220242}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 850, y: 370}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1731483909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731483907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.73207545, b: 0.73207545, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1731483910}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1361221997}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: loadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1731483910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731483907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.54349715, g: 1, b: 0.2415095, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2be7b70e984b51444aca9c12ae4723a7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1731483911
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731483907}
+  m_CullTransparentMesh: 1
+--- !u!225 &1731483912
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731483907}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1877857282 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1872862019021029391, guid: 8053d582484f0cc4eb940f616488bbc1, type: 3}
@@ -20140,6 +21040,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35205793, y: 0.9700365}
   m_EdgeRadius: 0
+--- !u!114 &1877857288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877857282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b8a10894bb6b947adff356b275fdf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975299211
 GameObject:
   m_ObjectHideFlags: 0
@@ -20469,3 +21381,55 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2108005631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108005633}
+  - component: {fileID: 2108005632}
+  m_Layer: 0
+  m_Name: PlayAgain2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2108005632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108005631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: People Arguing
+    sentences:
+    - 'Player: Ughh it seems that we both chose Paper, let''s play Again to decide
+      who wins...'
+    - Rock, Paper Scissors SHOOT!!!
+  additionalDialogue:
+    additionalSentences: []
+--- !u!4 &2108005633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108005631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 477.46588, y: 119.960464, z: -19.274023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
