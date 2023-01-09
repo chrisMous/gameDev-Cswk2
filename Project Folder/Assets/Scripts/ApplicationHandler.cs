@@ -8,6 +8,7 @@ public class ApplicationHandler : MonoBehaviour
     private static int friendShipLevel = 6;
     private static int state = 0;
     private static HealthBar friendship;
+    private static HealthBar quest;
     private static string gem = "no";
     private static int shrooms = 0;
 
@@ -15,7 +16,7 @@ public class ApplicationHandler : MonoBehaviour
     void Start()
     {
         friendship = GetComponent<HealthBar>();
-        
+        quest = GetComponent<HealthBar>();
     }
 
     // Update is called once per frame
@@ -23,11 +24,15 @@ public class ApplicationHandler : MonoBehaviour
     void Update()
     {
         friendship.setFriend(friendShipLevel);
-        
+        quest.setQuests(quests);
     }
     public static void setFriendActive(bool value){
         GameObject canvas = GameObject.Find("Canvas");
         canvas.transform.Find("healthbar").gameObject.SetActive(value);
+    }
+    public static void setQuestsActive(bool value){
+        GameObject canvas = GameObject.Find("Canvas");
+        canvas.transform.Find("Quests").gameObject.SetActive(value);
     }
     public static int getShrooms(){
         return shrooms;
@@ -58,4 +63,15 @@ public class ApplicationHandler : MonoBehaviour
         quests = 0;
         state = 0;
     }
+    public static void decreaseQ(){
+        Debug.Log("Decrease");
+        if (quests>=1)
+        quests = quests-1;
+    }
+    public static void IncreaseQ(){
+        Debug.Log("Increase");
+        if(quests<=3)
+            quests = quests+1;
+    }
+
 }

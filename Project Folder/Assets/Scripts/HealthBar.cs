@@ -5,10 +5,14 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Slider slider;
+    public Slider quests;
+    public Slider friendship;
 
     
     public void setFriend(int amount){
-        slider.value = amount;
+        friendship.value = amount;
+    }
+    public void setQuests(int amount){
+        quests.value = amount;
     }
 }
