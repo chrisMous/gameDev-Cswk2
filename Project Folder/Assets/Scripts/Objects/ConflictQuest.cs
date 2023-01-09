@@ -42,8 +42,10 @@ public class ConflictQuest : MonoBehaviour
     }
     public static void handleButton1(){
         if(questionNo == 0){
-            questionNo++;
+            GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
+            GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
             GameObject.Find("npc1").GetComponent<NPCManager>().TriggerDialogue();
+            resolvedConflict = true;
         }
         else{
         int paper = 2;
