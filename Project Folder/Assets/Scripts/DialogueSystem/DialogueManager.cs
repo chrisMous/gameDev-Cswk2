@@ -46,7 +46,8 @@ public class DialogueManager : MonoBehaviour
         if(nameText.text.CompareTo("Customer") == 0 || nameText.text.CompareTo("Customer Order 1") == 0 || 
         nameText.text.CompareTo("Bar  Manager") == 0 || nameText.text.CompareTo("Customer Order 2") == 0 ||
         nameText.text.CompareTo("Teacher") == 0 || (nameText.text.CompareTo("Student") == 0 && StudentQuest.complete) 
-         || (nameText.text.CompareTo("PeopleArguing") == 0 && ConflictQuest.resolvedConflict) || nameText.text.CompareTo("Villager") == 0 ){
+         || (nameText.text.CompareTo("PeopleArguing") == 0 && ConflictQuest.resolvedConflict) || nameText.text.CompareTo("Villager") == 0 
+         || nameText.text.CompareTo("Treasurer") == 0){
             state = 2;
         }
 
@@ -170,12 +171,26 @@ public class DialogueManager : MonoBehaviour
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
-         else if (nameText.text.CompareTo("The Two Kings") == 0){
+         else if (nameText.text.CompareTo("The Two Kings") == 0 || nameText.text.CompareTo("Treasurer") == 0){
              SceneManager.LoadScene("Home");
          }
          else{
             Debug.Log("Back to Town");
             SceneManager.LoadScene("Town");
+         }
+    }
+
+    public void checkTreasurer(){
+         if(nameText.text.CompareTo("Gold") == 0){
+             ChestQuest.completeQuest();
+             GameObject.Find("backHome").GetComponent<CanvasGroup>().interactable = true;
+             GameObject.Find("backHome").GetComponent<CanvasGroup>().alpha = 1;
+             choiceCanvas.GetComponent<CanvasGroup>().interactable = false;
+             choiceCanvas.GetComponent<CanvasGroup>().alpha = 0;
+             GameObject.Find("Treasurer").GetComponent<NPCManager>().TriggerDialogue();
+         }
+         else{
+            GameObject.Find("TreasurerLose").GetComponent<NPCManager>().TriggerDialogue();
          }
     }
 
