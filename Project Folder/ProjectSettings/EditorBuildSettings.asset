@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/MushroomForest.unity
     guid: f8310fa6c91f33d4194baa53df668fe3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/TownChristos.unity
-    guid: a421ca395950e8943a805f32ae6ed146
+    path: Assets/Prefabs/Scenes/Town.unity
+    guid: 5a053def77646784b8dc7f272b0d9f07
   m_configObjects: {}

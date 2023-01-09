@@ -13,9 +13,6 @@ public class NPCManager : NPCAction
     {
         if (canBeRead && Input.GetKeyDown(KeyCode.E)) {
             TriggerDialogue();
-            // if (questGiver != null) {
-            //     questGiver.AssignQuest();
-            // }
         }
     }
 

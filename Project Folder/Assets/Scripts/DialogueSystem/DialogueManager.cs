@@ -39,6 +39,12 @@ public class DialogueManager : MonoBehaviour
             state = 1;
         }
 
+        if(nameText.text.CompareTo("Customer") == 0 || nameText.text.CompareTo("Customer Order 1") == 0 || 
+        nameText.text.CompareTo("Bar  Manager") == 0 || nameText.text.CompareTo("Customer Order 2") == 0 ||
+        nameText.text.CompareTo("Teacher") == 0 || (nameText.text.CompareTo("Student") == 0 && StudentQuest.complete) ){
+            state = 2;
+        }
+
         DisplayNextSentence();
         animator.SetBool("isOpen", true);
     }
@@ -60,6 +66,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        
         else if ((sentences.Count == 0 && state == 1)) {
             Debug.Log("Showing choices!");
             buttonText();
@@ -99,6 +106,10 @@ public class DialogueManager : MonoBehaviour
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
+         if(nameText.text.CompareTo("Student") == 0 && StudentQuest.complete){
+         Debug.Log("Back to Town");
+         SceneManager.LoadScene("Town");
+         }
          nameText.text = "";
     }
 
@@ -107,12 +118,32 @@ public class DialogueManager : MonoBehaviour
         GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Sure I will get you the mushrooms";
         GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "I will come back later";
         }
+        else if(nameText.text.CompareTo("Student") == 0){
+         if(StudentQuest.questionNumber == 1){
+            GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "5";
+            GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "6";
+            }
+            else if(StudentQuest.questionNumber == 2){
+            GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Hampshire";
+            GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Kent";
+            
+            }
+            else if(StudentQuest.questionNumber == 3){
+            
+            GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Money";
+            GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Friends";
+            }
+        }
     }
     public void loadScene(){
          if(nameText.text.CompareTo("Inn Chef") == 0){
          SceneManager.LoadScene("MushroomForest");
          }
          else if(nameText.text.CompareTo("Mother Pig") == 0){
+         SceneManager.LoadScene("Town");
+         }
+         if(nameText.text.CompareTo("Bar Manager") == 0){
+         Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
     }
