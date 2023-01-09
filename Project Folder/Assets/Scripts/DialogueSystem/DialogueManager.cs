@@ -32,6 +32,10 @@ public class DialogueManager : MonoBehaviour
         }
         nameText.text = dialogue.name;
         
+        if(nameText.text.CompareTo("Bronze") == 0){
+            state = 1;
+        }
+
         if(nameText.text.CompareTo("River Manager") == 0 && RiverQuest.extraDialogue == false){
             state = 2;
         }

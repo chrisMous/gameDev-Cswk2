@@ -31,8 +31,10 @@ public class Chest : MonoBehaviour
             //scoreVal.decrementScore();
             //Debug.Log("Mushroom Collected");
             //ChestQuest.updateNum(gem);
-            //StartCoroutine(Delete());
         }
+    }
+    public void disappear(){
+            StartCoroutine(Delete());
     }
 
     IEnumerator Delete() {
