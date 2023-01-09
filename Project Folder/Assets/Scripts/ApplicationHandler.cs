@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class ApplicationHandler : MonoBehaviour
 {
     private static int quests = 0;
@@ -62,6 +64,11 @@ public class ApplicationHandler : MonoBehaviour
         friendShipLevel = 6;
         quests = 0;
         state = 0;
+        //reset everything
+        SceneManager.LoadScene("Start");
+    }
+    public static void quit(){
+        SceneManager.LoadScene("menu");
     }
     public static void decreaseQ(){
         Debug.Log("Decrease");

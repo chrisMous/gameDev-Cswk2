@@ -5,6 +5,7 @@ using UnityEngine;
 public class FriendMovement : MonoBehaviour
 {
     private Animator animator;
+    private bool right = true;
     private float speed=5f;
     private float distance;
     private bool started = false;
@@ -24,18 +25,29 @@ public class FriendMovement : MonoBehaviour
 
     void Update()
     {
-        target = new Vector2(player.position.x, player.position.y);
+       target = new Vector2(player.position.x, player.position.y);
         current = new Vector2(transform.position.x, transform.position.y);
         Debug.Log(rb.velocity.x + " + "+ rb.velocity.y);
         velo =(target-current).normalized; // this has length 1
         distance = Vector2.Distance(transform.position, player.position);
         animator.SetFloat("Horizontal", rb.velocity.x);
         animator.SetFloat("Vertical", rb.velocity.y);
+        if(rb.velocity.x >0f) {
+            if (sprite.flipX){
+                sprite.flipX = false;
+            }
+         }
+         else if (rb.velocity.x <0f){
+
+            sprite.flipX = true;
+         }
         if(distance>1f){
-            chase();
-        }
+            animator.SetBool("moving",true);
+           chase();
+       }
         else{
             rb.velocity = new Vector2(0,0);
+            animator.SetBool("moving",false);
         }
     }
     
