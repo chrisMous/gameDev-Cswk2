@@ -8,10 +8,12 @@ public class ConflictQuest : MonoBehaviour
     // Start is called before the first frame update
     public static bool resolvedConflict;
     public static int questionNo;
+    public static bool speakAgain;
     void Start()
     {
         resolvedConflict = false;
         questionNo = 0;
+        speakAgain = false;
     }
 
     public static void handleButton3(){

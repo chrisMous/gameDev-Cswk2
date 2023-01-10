@@ -5,11 +5,13 @@ using UnityEngine;
 public class StudentQuest : MonoBehaviour
 {
     public static bool complete;
+    public static bool speakAgain;
     public static int questionNumber;
     void Start()
     {
         complete = false;
         questionNumber = 1;
+        speakAgain = false;
     }
 
     public static void updateNumber(){

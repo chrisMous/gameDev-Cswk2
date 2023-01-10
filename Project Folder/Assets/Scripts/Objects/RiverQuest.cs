@@ -7,11 +7,13 @@ public class RiverQuest : MonoBehaviour
     public static int blocked;
     public static bool extraDialogue;
     public static bool completeRiver;
+    public static bool speakAgain;
     void Start()
     {
         blocked = 0;
         extraDialogue = false;
         completeRiver = false;
+        speakAgain = false;
     }
     public static void incrementBlocked(){
         blocked++;
