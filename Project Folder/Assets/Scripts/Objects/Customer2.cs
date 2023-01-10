@@ -9,6 +9,7 @@ public class Customer2 : NPCAction
     void Update()
     {   
         if(canBeRead && Input.GetKeyDown(KeyCode.E) && InnQuest.hasDrink1){
+            ApplicationHandler.decreaseF();
             GameObject.Find("WrongDrink").GetComponent<NPCManager>().TriggerDialogue();
         }
         else if(canBeRead && Input.GetKeyDown(KeyCode.E) && InnQuest.completed2){

@@ -16,7 +16,7 @@ public class ConflictQuest : MonoBehaviour
 
     public static void handleButton3(){
          if(questionNo == 0){
-            SceneManager.LoadScene("Town");
+            SceneManager.LoadScene("Home");
         }
         else{
         int rock = 1;
@@ -29,6 +29,7 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
             GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
             GameObject.Find("Loss1").GetComponent<NPCManager>().TriggerDialogue();
+            ApplicationHandler.decreaseF();
             resolvedConflict = true;
         } 
         else{
@@ -45,6 +46,7 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
             GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
             GameObject.Find("npc1").GetComponent<NPCManager>().TriggerDialogue();
+            ApplicationHandler.IncreaseF();
             resolvedConflict = true;
         }
         else{
@@ -58,6 +60,7 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
             GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
             GameObject.Find("Loss2").GetComponent<NPCManager>().TriggerDialogue();
+            ApplicationHandler.decreaseF();
             resolvedConflict = true;
         }
         else{
@@ -84,6 +87,7 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
             GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
             GameObject.Find("Loss3").GetComponent<NPCManager>().TriggerDialogue();
+            ApplicationHandler.decreaseF();
             resolvedConflict = true;
         }
         else{
