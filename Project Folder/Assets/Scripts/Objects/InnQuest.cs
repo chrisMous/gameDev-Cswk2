@@ -10,7 +10,7 @@ public class InnQuest : MonoBehaviour
     public static bool completed1;
     public static bool completed2;
     public static bool questDone;
- 
+    public static bool speakAgain;
     void Start()
     {
         hasDrink1 = false;
@@ -18,6 +18,7 @@ public class InnQuest : MonoBehaviour
         completed1 = false;
         completed2 = false;
         questDone = false;
+        speakAgain = false;
    
     }
     public static void getDrink1(){

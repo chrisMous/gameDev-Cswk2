@@ -7,6 +7,7 @@ public class MushroomQuest : MonoBehaviour
     public static bool completeQuest;
     public static bool killedPig;
     public static int noCollected;
+    public static bool speakAgain;
     void Start()
     {
         killedPig = false;

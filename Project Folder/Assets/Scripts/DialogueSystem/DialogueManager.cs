@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueCanvas;
     public GameObject choiceCanvas;
     private int state;
-
+    
     // Start is called before the first frame update
     void Start() {
         this.sentences = new Queue<string>();
@@ -33,6 +33,46 @@ public class DialogueManager : MonoBehaviour
         }
         nameText.text = dialogue.name;
         
+        if(nameText.text.CompareTo(" Treasurer") == 0 && ChestQuest.completedTreasurer && !ChestQuest.speakAgain){
+            ChestQuest.speakAgain = true;
+            GameObject.Find("TreasurerAfter").GetComponent<NPCManager>().TriggerDialogue();
+            state = 2;
+            ChestQuest.speakAgain = false;
+        }
+
+        if(nameText.text.CompareTo("Inn Chef") == 0 && MushroomQuest.completeQuest && !MushroomQuest.speakAgain){
+            MushroomQuest.speakAgain = true;
+            GameObject.Find("ChefAfter").GetComponent<NPCManager>().TriggerDialogue();
+            state = 2;
+            MushroomQuest.speakAgain = false;
+        }
+
+        if(nameText.text.CompareTo("Concerned Neighbour") == 0 && ConflictQuest.resolvedConflict && !ConflictQuest.speakAgain){
+            ConflictQuest.speakAgain = true;
+            GameObject.Find("NeighbourAfter").GetComponent<NPCManager>().TriggerDialogue();
+            state = 2;
+            ConflictQuest.speakAgain = false;
+        }
+
+        if(nameText.text.CompareTo("Inn Owner") == 0 && InnQuest.questDone && !InnQuest.speakAgain){
+            InnQuest.speakAgain = true;
+            GameObject.Find("OwnerAfter").GetComponent<NPCManager>().TriggerDialogue();
+            state = 2;
+            InnQuest.speakAgain = false;
+        }
+        if(nameText.text.CompareTo("Parent") == 0 && StudentQuest.complete && !StudentQuest.speakAgain){
+            StudentQuest.speakAgain = true;
+            GameObject.Find("ParentAfter").GetComponent<NPCManager>().TriggerDialogue();
+            state = 2;
+            StudentQuest.speakAgain = false;
+        }
+        if(nameText.text.CompareTo(" River Manager") == 0 && RiverQuest.completeRiver && !RiverQuest.speakAgain){
+            RiverQuest.speakAgain = true;
+            GameObject.Find("RiverAfter").GetComponent<NPCManager>().TriggerDialogue();
+            state = 2;
+            RiverQuest.speakAgain = false;
+        }
+
         if(nameText.text.CompareTo("Bronze") == 0){
             state = 1;
         }
@@ -85,6 +125,41 @@ public class DialogueManager : MonoBehaviour
             GameObject.Find("doneButton").GetComponent<CanvasGroup>().interactable = true;
             GameObject.Find("doneButton").GetComponent<CanvasGroup>().alpha = 1;
         }
+        else if(sentences.Count == 0 && !MushroomQuest.completeQuest && (nameText.text.CompareTo("Inn Chef") == 0)){
+            buttonText();
+            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
+            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else if(sentences.Count == 0 && !ConflictQuest.resolvedConflict && (nameText.text.CompareTo("Concerned Neighbour") == 0)){
+            buttonText();
+            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
+            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else if(sentences.Count == 0 && !InnQuest.questDone && (nameText.text.CompareTo("Inn Owner") == 0)){
+            buttonText();
+            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
+            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else if(sentences.Count == 0 && !ChestQuest.completedTreasurer && (nameText.text.CompareTo(" Treasurer") == 0)){
+            buttonText();
+            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
+            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else if(sentences.Count == 0 && !StudentQuest.complete && (nameText.text.CompareTo("Parent") == 0)){
+            buttonText();
+            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
+            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else if(sentences.Count == 0 && !RiverQuest.completeRiver && (nameText.text.CompareTo(" River Manager") == 0)){
+            buttonText();
+            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
+            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        }
+        else if(sentences.Count == 0 && (nameText.text.CompareTo("The Two Kings") == 0)){
+            buttonText();
+            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
+            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        }
         else if ((sentences.Count == 0 && state == 1)) {
             Debug.Log("Showing choices!");
             buttonText();
@@ -120,20 +195,23 @@ public class DialogueManager : MonoBehaviour
 
         if(nameText.text.CompareTo("Mother Pig") == 0){
          Debug.Log("Back to Town");
-         SceneManager.LoadScene("Town");
+         SceneManager.LoadScene("Home");
          }
          else if(nameText.text.CompareTo("River  Manager") == 0){
          Debug.Log("Back to Town");
-         SceneManager.LoadScene("Town");
+         SceneManager.LoadScene("Home");
          }
          else if(nameText.text.CompareTo("Student") == 0 && StudentQuest.complete){
          Debug.Log("Back to Town");
-         SceneManager.LoadScene("Town");
+         SceneManager.LoadScene("Home");
          }
          else if(nameText.text.CompareTo("People Arguing") == 0 && ConflictQuest.resolvedConflict){
          Debug.Log("Back to Town");
-         SceneManager.LoadScene("Town");
+         SceneManager.LoadScene("Home");
          }
+         else if(nameText.text.CompareTo(" Treasurer") == 0 && ChestQuest.completedTreasurer && ChestQuest.speakAgain){
+            SceneManager.LoadScene("Home");
+        }
          else {
          nameText.text = "";
          }
