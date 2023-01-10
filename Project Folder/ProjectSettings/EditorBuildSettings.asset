@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/MushroomForest.unity
     guid: f8310fa6c91f33d4194baa53df668fe3
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/Inn.unity
+    guid: d3fe5ba419feb75419ca6119e6b9a9ab
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/conflict.unity
+    guid: 3917d47613563a04a964606b28c3fdb5
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -17,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/Home.unity
     guid: 84158a1ac8a27c04aba2019abec6da29
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/treasurer.unity
+    guid: b6d74a529c0a152498d3a47012d332c7
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/student.unity
+    guid: 73635326166d41149997d27b811d7c89
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/river.unity
+    guid: 423f1634d46806443b6289b08a07e7f7
   m_configObjects: {}

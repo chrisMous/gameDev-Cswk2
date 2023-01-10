@@ -62,6 +62,7 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         DisplayNextSentence();
+        animator.SetBool("isOpen", true);
     }
 
     public void DisplayNextSentence() {
@@ -130,6 +131,25 @@ public class DialogueManager : MonoBehaviour
         GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Sure I will get you the mushrooms";
         GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "I will come back later";
         }
+        else if(nameText.text.CompareTo(" Treasurer") == 0){
+        GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Go to the forest";
+        GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Decline Request";
+        }
+        else if(nameText.text.CompareTo(" River Manager") == 0){
+        GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "I might come back later to help";
+        }
+        else if(nameText.text.CompareTo("Parent") == 0){
+        GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Help Child";
+        GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "I will return later if I have time";
+        }
+        else if(nameText.text.CompareTo("Inn Owner") == 0){
+        GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Sure I will cover your shift";
+        GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Sorry I can't help you at the moment";
+        }
+        else if(nameText.text.CompareTo("Concerned Neighbour") == 0){
+        GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Sure I will help!";
+        GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Sorry I'm busy right now";
+        }
         else if(nameText.text.CompareTo("Student") == 0){
          if(StudentQuest.questionNumber == 1){
             GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "5";
@@ -164,19 +184,34 @@ public class DialogueManager : MonoBehaviour
          if(nameText.text.CompareTo("Inn Chef") == 0){
          SceneManager.LoadScene("MushroomForest");
          }
+         else if(nameText.text.CompareTo(" Treasurer") == 0){
+             SceneManager.LoadScene("treasurer");
+         }
+         else if(nameText.text.CompareTo(" River Manager") == 0){
+             SceneManager.LoadScene("river");
+         }
          else if(nameText.text.CompareTo("Mother Pig") == 0){
          SceneManager.LoadScene("Town");
          }
          else if(nameText.text.CompareTo("Bar Manager") == 0){
          Debug.Log("Back to Town");
-         SceneManager.LoadScene("Town");
+         SceneManager.LoadScene("Home");
+         }
+         else if(nameText.text.CompareTo("Parent") == 0){
+         SceneManager.LoadScene("student");
+         }
+         else if(nameText.text.CompareTo("Inn Owner") == 0){
+         SceneManager.LoadScene("Inn");
+         }
+         else if(nameText.text.CompareTo("Concerned Neighbour") == 0){
+         SceneManager.LoadScene("conflict");
          }
          else if (nameText.text.CompareTo("The Two Kings") == 0 || nameText.text.CompareTo("Treasurer") == 0){
              SceneManager.LoadScene("Home");
          }
          else{
             Debug.Log("Back to Town");
-            SceneManager.LoadScene("Town");
+            SceneManager.LoadScene("Home");
          }
     }
 
@@ -194,4 +229,34 @@ public class DialogueManager : MonoBehaviour
          }
     }
 
+    //Handles Dialogue for Choice1 Button
+    public void handleTownDialogue1(){
+        if(nameText.text.CompareTo("Inn Chef") == 0){
+            loadScene();
+        }
+        else if(nameText.text.CompareTo(" Treasurer") == 0){
+            ApplicationHandler.decreaseF();
+            loadScene();
+        }
+        else if(nameText.text.CompareTo(" River Manager") == 0){
+            ApplicationHandler.decreaseF();
+            loadScene();
+        }
+        else if(nameText.text.CompareTo("Parent") == 0){
+            loadScene();
+        }
+        else if(nameText.text.CompareTo("Inn Owner") == 0){
+            loadScene();
+        }
+        else if(nameText.text.CompareTo("Concerned Neighbour") == 0){
+            loadScene();
+        }
+    }
+    //Handles Dialogue for Choice2 Button
+    public void handleTownDialogue2(){
+        if(nameText.text.CompareTo(" Treasurer") == 0){
+            ApplicationHandler.IncreaseF();
+        }
+        EndDialogue();
+    }
 }

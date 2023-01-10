@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &60955166 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
-  m_PrefabInstance: {fileID: 2052930867}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &113979828
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +267,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_LocalScale.x
@@ -330,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: dialogue.name
-      value: Treasurer
+      value: ' Treasurer'
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -485,7 +474,7 @@ Transform:
   - {fileID: 2050819775}
   - {fileID: 1453240117}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567419234
 GameObject:
@@ -2663,7 +2652,7 @@ RectTransform:
   - {fileID: 1575815836}
   - {fileID: 2023865051}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -45263,7 +45252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8554701768275179100, guid: 14c8ee605b69ad04687c73e022a5b5fd, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8554701768275179100, guid: 14c8ee605b69ad04687c73e022a5b5fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45317,7 +45306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_LocalScale.x
@@ -45406,15 +45395,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3820320197715961115, guid: 8053d582484f0cc4eb940f616488bbc1, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3820320197715961115, guid: 8053d582484f0cc4eb940f616488bbc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.37
+      value: 12.02
       objectReference: {fileID: 0}
     - target: {fileID: 3820320197715961115, guid: 8053d582484f0cc4eb940f616488bbc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.13
+      value: 14.19
       objectReference: {fileID: 0}
     - target: {fileID: 3820320197715961115, guid: 8053d582484f0cc4eb940f616488bbc1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -46705,7 +46694,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_LocalScale.x
@@ -46757,7 +46746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: dialogue.name
-      value: River Manager
+      value: ' River Manager'
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -46873,6 +46862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102920753}
     m_Modifications:
+    - target: {fileID: 3093243966451328207, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: handleTownDialogue1
+      objectReference: {fileID: 0}
     - target: {fileID: 3093243966618320146, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_Name
       value: DialogueParent
@@ -46924,14 +46917,14 @@ PrefabInstance:
     - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 60955166}
+      objectReference: {fileID: 1575815837}
     - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerAdditionalDialogue
+      value: handleTownDialogue2
       objectReference: {fileID: 0}
     - target: {fileID: 3093243967352642988, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: NPCAction, Assembly-CSharp
+      value: DialogueManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
@@ -46940,6 +46933,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3093243966618320365, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
   m_PrefabInstance: {fileID: 1575815835}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1575815837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3093243966618320367, guid: 40cdac73d1265da478c84e09ce6365ed, type: 3}
+  m_PrefabInstance: {fileID: 1575815835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedfba19ad9d1f94abe3674b9d540a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1866836884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46949,7 +46953,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_LocalScale.x
@@ -47000,6 +47004,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.name
+      value: Parent
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465313907221235608, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
       value: Hello There young people you look very smart...
       objectReference: {fileID: 0}
@@ -47040,6 +47052,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: {fileID: 0}
   friendship: {fileID: 0}
+--- !u!114 &1925463749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925463741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44fa07028c09fc46b53d3b9d3e43264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023865050
 GameObject:
   m_ObjectHideFlags: 0
@@ -49155,11 +49179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.02
+      value: -6.21
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.19
+      value: 3.32
       objectReference: {fileID: 0}
     - target: {fileID: 3465313907221235604, guid: 946d2fa884c255e47a03d17e05b262d0, type: 3}
       propertyPath: m_LocalPosition.z
