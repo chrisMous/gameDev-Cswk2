@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalChoices : MonoBehaviour
 {
@@ -28,7 +29,8 @@ public class FinalChoices : MonoBehaviour
             GameObject.Find("CorrectChoice").GetComponent<NPCManager>().TriggerDialogue();
         }
         else if(badEnding){
-            //Choose to End Game
+                SceneManager.LoadScene("Menu");
+
         }
     }
     public static void secondChoice(){
@@ -40,7 +42,7 @@ public class FinalChoices : MonoBehaviour
             GameObject.Find("BadChoice").GetComponent<NPCManager>().TriggerDialogue();
         }
          else if(badEnding){
-            //Choose to Try Again
+            SceneManager.LoadScene("Menu");
         }
     }
     public void goToCastle(){
