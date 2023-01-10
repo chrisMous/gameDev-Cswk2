@@ -13,6 +13,7 @@ public class ApplicationHandler : MonoBehaviour
     private static HealthBar quest;
     private static string gem = "no";
     private static int shrooms = 0;
+    private bool treasure = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class ApplicationHandler : MonoBehaviour
     {
         friendship.setFriend(friendShipLevel);
         quest.setQuests(quests);
+        
     }
     public static void setFriendActive(bool value){
         GameObject canvas = GameObject.Find("Canvas");
