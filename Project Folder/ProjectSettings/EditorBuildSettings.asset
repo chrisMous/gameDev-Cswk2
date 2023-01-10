@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Prefabs/Scenes/menu.unity
+    guid: 32786e73283c16342b7a33bc539620ea
+  - enabled: 1
     path: Assets/Prefabs/Scenes/MushroomForest.unity
     guid: f8310fa6c91f33d4194baa53df668fe3
   - enabled: 1
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/Castle.unity
     guid: c6dacaac14a89c1488ee99b86f2b79ec
-  - enabled: 1
-    path: Assets/Prefabs/Scenes/menu.unity
-    guid: 32786e73283c16342b7a33bc539620ea
   - enabled: 1
     path: Assets/Prefabs/Scenes/Start.unity
     guid: 526335c7279a8524c817ec1742b9d446
