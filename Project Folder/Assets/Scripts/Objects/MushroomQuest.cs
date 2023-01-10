@@ -22,6 +22,7 @@ public class MushroomQuest : MonoBehaviour
         Debug.Log("All Collected");
         GameObject.Find("Pigs").transform.localScale = new Vector3(1, 1, 1);
         GameObject.Find("Player").GetComponent<NPCManager>().TriggerDialogue();
+        ApplicationHandler.IncreaseQ();
     }
   }
   public void pigsDisappear(){

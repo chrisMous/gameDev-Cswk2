@@ -17,6 +17,7 @@ public class StudentQuest : MonoBehaviour
     }
     public static void completeQuest(){
         complete = true;
+        ApplicationHandler.IncreaseQ();
     }
     public static void handleButton1(){
         questionNumber++;

@@ -44,7 +44,7 @@ public class InnQuest : MonoBehaviour
         if(completed1 && completed2){
             Debug.Log("Completed Quest");
             questDone = true;
-            //GameObject.Find("QuestComplete").GetComponent<NPCManager>().TriggerDialogue();
+            ApplicationHandler.IncreaseQ();
         }
     }
 }

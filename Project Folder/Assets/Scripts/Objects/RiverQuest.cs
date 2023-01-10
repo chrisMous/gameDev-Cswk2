@@ -6,10 +6,12 @@ public class RiverQuest : MonoBehaviour
 {
     public static int blocked;
     public static bool extraDialogue;
+    public static bool completeRiver;
     void Start()
     {
         blocked = 0;
         extraDialogue = false;
+        completeRiver = false;
     }
     public static void incrementBlocked(){
         blocked++;
@@ -18,6 +20,8 @@ public class RiverQuest : MonoBehaviour
         if(blocked == 2){
             Debug.Log("Successfully Blocked");
             extraDialogue = true;
+            completeRiver = true;
+            ApplicationHandler.IncreaseQ();
             Debug.Log("Extra: " + extraDialogue);
             GameObject.Find("Player").GetComponent<NPCManager>().TriggerDialogue();
         }
