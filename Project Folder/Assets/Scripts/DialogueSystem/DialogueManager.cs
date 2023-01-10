@@ -51,7 +51,6 @@ public class DialogueManager : MonoBehaviour
          || nameText.text.CompareTo("Treasurer") == 0 || nameText.text.CompareTo(" Friend") ==0){
             state = 2;
         }
-        
 
         DisplayNextSentence();
         animator.SetBool("isOpen", true);
@@ -75,16 +74,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        else if(sentences.Count == 0 && !StudentQuest.complete && nameText.text.CompareTo("Student") == 0 ){
-            buttonText();
-            choiceCanvas.GetComponent<CanvasGroup>().interactable = true;
-            choiceCanvas.GetComponent<CanvasGroup>().alpha = 1;
-        }
-        else if(sentences.Count == 0 && InnQuest.questDone && (nameText.text.CompareTo("Customer") == 0)){
-            GameObject.Find("QuestComplete").GetComponent<NPCManager>().TriggerDialogue();
-            GameObject.Find("doneButton").GetComponent<CanvasGroup>().interactable = true;
-            GameObject.Find("doneButton").GetComponent<CanvasGroup>().alpha = 1;
-        }
+        
         else if ((sentences.Count == 0 && state == 1)) {
             Debug.Log("Showing choices!");
             buttonText();
@@ -93,7 +83,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         else if(sentences.Count == 0 && state == 2){
-            Debug.Log("Ending Dialog");
             EndDialogue();
             return;
         }
@@ -134,7 +123,7 @@ public class DialogueManager : MonoBehaviour
          Debug.Log("Back to Town");
          SceneManager.LoadScene("Town");
          }
-         else {
+         else{
          nameText.text = "";
          }
     }
@@ -164,20 +153,17 @@ public class DialogueManager : MonoBehaviour
         GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Sorry I'm busy right now";
         }
         else if(nameText.text.CompareTo("Student") == 0){
-            Debug.Log("stdnt");
          if(StudentQuest.questionNumber == 1){
-            Debug.Log("stdnt1");
             GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "5";
             GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "6";
             }
             else if(StudentQuest.questionNumber == 2){
-                Debug.Log("stdnt2");
             GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Hampshire";
             GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Kent";
             
             }
             else if(StudentQuest.questionNumber == 3){
-            Debug.Log("stdnt3");
+            
             GameObject.Find("Choice1").GetComponentInChildren<Text>().text = "Money";
             GameObject.Find("Choice2").GetComponentInChildren<Text>().text = "Friends";
             }
@@ -207,9 +193,7 @@ public class DialogueManager : MonoBehaviour
              SceneManager.LoadScene("river");
          }
          else if(nameText.text.CompareTo("Mother Pig") == 0){
-            MushroomQuest.completeQuest = true;
-            ApplicationHandler.IncreaseF();
-         SceneManager.LoadScene("Home");
+         SceneManager.LoadScene("Town");
          }
          else if(nameText.text.CompareTo("Bar Manager") == 0){
          Debug.Log("Back to Town");
@@ -269,19 +253,11 @@ public class DialogueManager : MonoBehaviour
         else if(nameText.text.CompareTo("Concerned Neighbour") == 0){
             loadScene();
         }
-        else if(nameText.text.CompareTo("River Manager") == 0){
-            ApplicationHandler.decreaseF();
-            return;
-        }
     }
     //Handles Dialogue for Choice2 Button
     public void handleTownDialogue2(){
         if(nameText.text.CompareTo(" Treasurer") == 0){
             ApplicationHandler.IncreaseF();
-        }
-        if(nameText.text.CompareTo("River Manager") == 0){
-            ApplicationHandler.IncreaseF();
-            return;
         }
         EndDialogue();
     }

@@ -27,7 +27,6 @@ public class StudentQuest : MonoBehaviour
             GameObject.Find("Question3").GetComponent<NPCManager>().TriggerDialogue();
         }
         else if(questionNumber == 4){
-            ApplicationHandler.decreaseF();
             GameObject.Find("MoneyChoice").GetComponent<NPCManager>().TriggerDialogue();
             completeQuest();
         }
@@ -41,7 +40,6 @@ public class StudentQuest : MonoBehaviour
             GameObject.Find("Question3").GetComponent<NPCManager>().TriggerDialogue();
         }
         else if(questionNumber == 4){
-            ApplicationHandler.IncreaseF();
             GameObject.Find("FriendChoice").GetComponent<NPCManager>().TriggerDialogue();
             completeQuest();
         }
