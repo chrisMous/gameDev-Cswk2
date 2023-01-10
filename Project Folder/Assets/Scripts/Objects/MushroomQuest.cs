@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class MushroomQuest : MonoBehaviour
 {
+    public static bool completeQuest;
+    public static bool killedPig;
     public static int noCollected;
     void Start()
     {
+        killedPig = false;
+        completeQuest = false;
         noCollected = 0;
         GameObject.Find("Pigs").transform.localScale = new Vector3(0, 0, 0);
     }
@@ -21,6 +25,9 @@ public class MushroomQuest : MonoBehaviour
     }
   }
   public void pigsDisappear(){
+    killedPig = true;
+    completeQuest = true;
+    ApplicationHandler.decreaseF();
     GameObject.Find("Pigs").transform.localScale = new Vector3(0, 0, 0);
   }
 }
