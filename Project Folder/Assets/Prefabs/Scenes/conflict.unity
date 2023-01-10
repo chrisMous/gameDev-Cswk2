@@ -21824,7 +21824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b8a10894bb6b947adff356b275fdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!1 &1914287553
 GameObject:
   m_ObjectHideFlags: 0
@@ -21864,15 +21863,11 @@ RectTransform:
   m_SizeDelta: {x: -14, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914287555
-=======
---- !u!114 &1877857289
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1914287553}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -21964,14 +21959,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914287553}
   m_CullTransparentMesh: 1
-=======
-  m_GameObject: {fileID: 1877857282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44fa07028c09fc46b53d3b9d3e43264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
 --- !u!1 &1975299211
 GameObject:
   m_ObjectHideFlags: 0
