@@ -31,12 +31,14 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("Loss1").GetComponent<NPCManager>().TriggerDialogue();
             ApplicationHandler.decreaseF();
             resolvedConflict = true;
+            ApplicationHandler.IncreaseQ();
         } 
         else{
              GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
              GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
              GameObject.Find("Win1").GetComponent<NPCManager>().TriggerDialogue();
              resolvedConflict = true;
+             ApplicationHandler.IncreaseQ();
         }
         }
     
@@ -48,6 +50,7 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("npc1").GetComponent<NPCManager>().TriggerDialogue();
             ApplicationHandler.IncreaseF();
             resolvedConflict = true;
+            ApplicationHandler.IncreaseQ();
         }
         else{
         int paper = 2;
@@ -62,12 +65,14 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("Loss2").GetComponent<NPCManager>().TriggerDialogue();
             ApplicationHandler.decreaseF();
             resolvedConflict = true;
+            ApplicationHandler.IncreaseQ();
         }
         else{
              GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
              GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
              GameObject.Find("Win2").GetComponent<NPCManager>().TriggerDialogue();
              resolvedConflict = true;
+             ApplicationHandler.IncreaseQ();
         }
       }
     }
@@ -89,12 +94,14 @@ public class ConflictQuest : MonoBehaviour
             GameObject.Find("Loss3").GetComponent<NPCManager>().TriggerDialogue();
             ApplicationHandler.decreaseF();
             resolvedConflict = true;
+            ApplicationHandler.IncreaseQ();
         }
         else{
              GameObject.Find("goHome").GetComponent<CanvasGroup>().interactable = true;
              GameObject.Find("goHome").GetComponent<CanvasGroup>().alpha = 1;
              GameObject.Find("Win3").GetComponent<NPCManager>().TriggerDialogue();
              resolvedConflict = true;
+             ApplicationHandler.IncreaseQ();
         }
         }
     }

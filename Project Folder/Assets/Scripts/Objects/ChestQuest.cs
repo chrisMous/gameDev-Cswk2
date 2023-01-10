@@ -11,5 +11,6 @@ public class ChestQuest : MonoBehaviour
     }
     public static void completeQuest(){
       completedTreasurer = true;
+      ApplicationHandler.IncreaseQ();
     }
 }
