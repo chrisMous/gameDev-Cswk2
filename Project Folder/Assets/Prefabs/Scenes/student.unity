@@ -2331,78 +2331,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< Updated upstream
---- !u!1001 &965975035
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 78.10466
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.988995
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004931, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004933, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_Name
-      value: friend
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004942, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 824862272}
-    - target: {fileID: 4958075379716004942, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4958075379716004943, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4958075379716004943, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-=======
 --- !u!19719996 &945082427
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2419,7 +2347,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
->>>>>>> Stashed changes
 --- !u!1001 &1051946785
 PrefabInstance:
   m_ObjectHideFlags: 0
