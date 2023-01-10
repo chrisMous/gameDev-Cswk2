@@ -48,12 +48,7 @@ public class DialogueManager : MonoBehaviour
         nameText.text.CompareTo("Bar  Manager") == 0 || nameText.text.CompareTo("Customer Order 2") == 0 ||
         nameText.text.CompareTo("Teacher") == 0 || (nameText.text.CompareTo("Student") == 0 && StudentQuest.complete) 
          || (nameText.text.CompareTo("PeopleArguing") == 0 && ConflictQuest.resolvedConflict) || nameText.text.CompareTo("Villager") == 0 
-<<<<<<< Updated upstream
          || nameText.text.CompareTo("Treasurer") == 0 || nameText.text.CompareTo(" Friend") ==0){
-=======
-         || nameText.text.CompareTo("Treasurer") == 0){
-            
->>>>>>> Stashed changes
             state = 2;
         }
         
