@@ -43,7 +43,8 @@ public class FinalChoices : MonoBehaviour
             //Choose to Try Again
         }
     }
-    public static void goToCastle(){
+    public void goToCastle(){
         GameObject.Find("Kings").transform.localScale = new Vector3(0, 0, 0);
+        this.GetComponent<PlayerMovement>().leadToCastle();
     }
 }

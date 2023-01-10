@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public static bool move = true;
 
     public void Start() {
+        move = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         speed = defaultSpeed;
@@ -33,5 +34,26 @@ public class PlayerMovement : MonoBehaviour
         if(move){
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         }
+    }
+    public void leadToCastle(){
+        Debug.Log("going to castle");
+        PlayerMovement.move = false;
+        Transform exit = GameObject.Find("exit").GetComponent<Transform>();
+        Vector2 target = new Vector2(exit.position.x, exit.position.y);
+        Vector2 current = new Vector2(transform.position.x, transform.position.y);
+        Vector2 velo =(target-current).normalized;
+        StartCoroutine(movee(velo));
+
+    }
+     IEnumerator movee(Vector2 velo) {
+        
+        yield return new WaitForSeconds(1f);
+        rb.velocity = velo*speed;
+        Debug.Log(rb.velocity.y);
+        animator.SetFloat("Vertical", rb.velocity.y);
+        animator.SetFloat("Speed", 5f);
+        Debug.Log(animator.GetFloat("Vertical"));
+        
+    
     }
 }

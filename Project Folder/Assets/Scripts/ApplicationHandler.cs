@@ -74,6 +74,7 @@ public class ApplicationHandler : MonoBehaviour
     }
 
     public static void reset(){
+        PlayerMovement.move = true;
         friendShipLevel = 6;
         quests = 0;
         state = 0;
