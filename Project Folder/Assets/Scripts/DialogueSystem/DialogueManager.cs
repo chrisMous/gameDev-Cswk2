@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Interaction dialogue) {
         //StopAllCoroutines();
+        PlayerMovement.move = false;
         dialogueCanvas.GetComponent<CanvasGroup>().alpha = 1;
         Debug.Log("Starting Convo: " + dialogue.name);
 
@@ -47,7 +48,7 @@ public class DialogueManager : MonoBehaviour
         nameText.text.CompareTo("Bar  Manager") == 0 || nameText.text.CompareTo("Customer Order 2") == 0 ||
         nameText.text.CompareTo("Teacher") == 0 || (nameText.text.CompareTo("Student") == 0 && StudentQuest.complete) 
          || (nameText.text.CompareTo("PeopleArguing") == 0 && ConflictQuest.resolvedConflict) || nameText.text.CompareTo("Villager") == 0 
-         || nameText.text.CompareTo("Treasurer") == 0){
+         || nameText.text.CompareTo("Treasurer") == 0 || nameText.text.CompareTo(" Friend") ==0){
             state = 2;
         }
 
@@ -100,6 +101,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void EndDialogue() {
+        PlayerMovement.move = true;
         dialogueText.text = "";
         choiceCanvas.GetComponent<CanvasGroup>().interactable = false;
         choiceCanvas.GetComponent<CanvasGroup>().alpha = 0;

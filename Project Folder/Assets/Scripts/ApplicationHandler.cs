@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ApplicationHandler : MonoBehaviour
 {
-    private static int quests = 4;
+    private static int quests = 0;
     public static int friendShipLevel = 6;
     private static int state = 0;
     private static HealthBar friendship;

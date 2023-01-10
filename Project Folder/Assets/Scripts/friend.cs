@@ -33,8 +33,9 @@ public class friend : MonoBehaviour
             // Friend: Hey Friend, I came to visit because I saw a gathering in town
             // Me: Let's go
             Destroy(block);
+            GetComponent<NPCManager>().TriggerDialogue();
             ApplicationHandler.setFriendActive(true);
-            ApplicationHandler.setQuestsActive(true);
+            //ApplicationHandler.setQuestsActive(true);
             movement.enabled = true;
         Debug.Log("enabled movement");
 

@@ -26,13 +26,16 @@ public int place;
     void changeRoom(){
         string room = "Home" ;
         if (place == 1){
-            room = "Story Intro";
+            room = "StoryIntro";
         }
         else if (place == 2){
             room = "Town";
             if(ApplicationHandler.getQuests() >= 4){
-                room = "Story Climax";
+                room = "StoryClimax";
             }
+        }
+        else if (place == 3){
+            room = "Castle";
         }
         
         SceneManager.LoadScene(room);

@@ -933,52 +933,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &701297827 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4958075379716004933, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-  m_PrefabInstance: {fileID: 4958075379292694758}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &701297835
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701297827}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3aa4dbb708695634b942c37ef859a53a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &701297836
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701297827}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &890705077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,7 +3966,7 @@ GameObject:
   - component: {fileID: 1103006960}
   - component: {fileID: 1103006959}
   m_Layer: 0
-  m_Name: EventSystem (1)
+  m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53124,16 +53078,37 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1429435845}
-    - target: {fileID: 4958075379716004942, guid: a77077f303a67cf4987029dd81b17512, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4958075379716004943, guid: a77077f303a67cf4987029dd81b17512, type: 3}
       propertyPath: block
       value: 
       objectReference: {fileID: 909552341}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77077f303a67cf4987029dd81b17512, type: 3}
+--- !u!1 &4958075379292694759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4958075379716004933, guid: a77077f303a67cf4987029dd81b17512, type: 3}
+  m_PrefabInstance: {fileID: 4958075379292694758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4958075379292694760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958075379292694759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047d1b06bd9830e42951df695e5260c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: ' Friend'
+    sentences:
+    - 'Hey Friend. I heard people gathered In town for a big event. Let''s get going. '
+    - By the way notice that bar on the left? It's how good our friendship is. Please
+      keep it by trusting me in case of doubt..
+  additionalDialogue:
+    additionalSentences: []
 --- !u!1001 &8460425139343666990
 PrefabInstance:
   m_ObjectHideFlags: 0
